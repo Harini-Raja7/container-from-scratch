@@ -164,10 +164,3 @@ sudo ./container.sh
 - Writing idempotent, defensive Bash — safe to re-run, with proper cleanup on exit
 
 ---
-
-## Resume bullet points
-
-- Built a Linux container runtime from scratch in Bash, implementing PID/mount/network namespace isolation, cgroups v2 resource limits, and chroot-based filesystem jails using only core kernel primitives — no container runtime libraries.
-- Implemented an overlayfs-based copy-on-write filesystem layer per container, enabling multiple simultaneous containers with fully isolated, independently writable filesystems sharing one read-only base image.
-- Designed and automated Linux bridge/veth virtual networking with NAT (iptables MASQUERADE) and per-container IP allocation, giving each container independent internet connectivity without IP collision.
-- Solved cross-namespace process coordination by designing a file-based signal handshake between host and container processes, correctly sequencing network attachment and cgroup enforcement around namespace creation.
