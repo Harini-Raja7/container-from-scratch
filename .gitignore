@@ -1,0 +1,5 @@
+rootfs/
+overlay/
+ip_counter.txt
+*.ter.gz
+*.gz
